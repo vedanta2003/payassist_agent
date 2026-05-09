@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Environment variables — NEVER commit
+.env
+.env.local
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Internal snapshots / rollback backups (not part of the project)
+.snapshots/
+
+# Eval & adversarial output files (regeneratable; commit only if you want to track baselines)
+*.txt.log
+adversarial_*.txt
+adversarial_*.json
+eval_results.json
+leap_check.json
+greeting_check.json
+stale_check.json
+drip_check.json
+email_fix_check.json
+
+# Keep these as committed baselines (uncomment to gitignore instead):
+# baseline_4o_full.json
+# baseline_4o_quick.json
