@@ -43,12 +43,12 @@ export OPENAI_API_KEY=sk-...
  
 ### 5. Pick how you want to run it
 
-## I. Run in terminal
+#### I. Run in terminal
  
 ```bash
 python cli.py                             
 ```
-## II. Run in Web App (recommended)
+#### II. Run in Web App (recommended)
 
 ```bash
 uvicorn server:app --reload --port 8000    
