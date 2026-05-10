@@ -1,23 +1,53 @@
+Readme · MD
+Copy
+
 # PayAssist
-
+ 
 LLM-driven payment collection agent. Conversational, end-to-end: greets the user, looks up an account, verifies identity strictly, collects card details, charges, and recaps — all over chat. Single-file `Agent` class implementing the required `next(user_input) -> {"message": str}` interface.
-
+ 
 Built for the Prodigal Agent Engineer take-home.
-
+ 
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/fastapi-0.110+-009688)
+![Model](https://img.shields.io/badge/model-gpt--4o-412991)
+ 
 ---
-
+ 
 ## Quick start
-
+ 
+### 1. Clone the repo
+ 
 ```bash
-# 1. Install
+git clone https://github.com/vedanta2003/payassist_agent.git
+cd payassist
+```
+ 
+### 2. Set up a virtual environment
+ 
+```bash
+python3 -m venv venv
+source venv/bin/activate          # macOS / Linux
+# venv\Scripts\activate           # Windows
+```
+ 
+### 3. Install dependencies
+ 
+```bash
 pip install -r requirements.txt
-
-# 2. Set your API key
+```
+ 
+### 4. Add your OpenAI API key
+ 
+```bash
 export OPENAI_API_KEY=sk-...
-
-# 3. Pick one to run:
-python cli.py                          # interactive REPL
-uvicorn server:app --reload --port 8000   # web UI at http://localhost:8000
+# or drop it in a .env file at the project root
+```
+ 
+### 5. Pick how you want to run it
+ 
+```bash
+python cli.py                              # interactive terminal REPL
+uvicorn server:app --reload --port 8000    # web UI at http://localhost:8000
 ```
 
 Web UI shows the chat on the left and a live stream of every tool call, API call, and verification event on the right — useful for understanding what the agent is doing internally.
