@@ -19,7 +19,7 @@ Built for the Prodigal Agent Engineer take-home.
  
 ```bash
 git clone https://github.com/vedanta2003/payassist_agent.git
-cd payassist
+cd payassist_agent
 ```
  
 ### 2. Set up a virtual environment
